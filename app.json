@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/cart/cart",
+    "pages/category/category",
     "pages/member/index/index",
     "pages/logs/logs"
   ],
@@ -19,6 +20,12 @@
         "iconPath": "images/icon_home.png",
         "selectedIconPath": "images/icon_home_selected.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "images/icon_category.png",
+        "selectedIconPath": "images/icon_category_selected.png",
+        "text": "分类"
       },
       {
         "pagePath": "pages/cart/cart",
