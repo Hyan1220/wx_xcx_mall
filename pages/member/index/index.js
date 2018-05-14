@@ -1,95 +1,39 @@
-// pages/member/index/index.js
+const app = getApp()
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
+  onShow() {
+    this.getUserInfo();
+  },	
+  getUserInfo: function (cb) {
+    var that = this
+    wx.login({
+      success: function () {
+        wx.getUserInfo({
+          success: function (res) {
+            that.setData({
+              userInfo: res.userInfo
+            });
+          }
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    wx.showModal({
-      content: "生命周期函数--监听页面加载",
-      confirmText: "确定",
-      cancelText: "取消"
+  /* 订单 */ 
+  navigateToOrder: function (e) {
+    var status = e.currentTarget.dataset.status
+    wx.navigateTo({
+      url: '../../order/list/list?status=' + status
     });
-
+  },
+  navigateToAddress: function () {
+    wx.navigateTo({
+      url: '../../address/list/list'
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    wx.showModal({
-      content: "生命周期函数--监听页面初次渲染完成",
-      confirmText: "确定",
-      cancelText: "取消"
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    wx.showModal({
-      content: "生命周期函数--监听页面显示",
-      confirmText: "确定",
-      cancelText: "取消"
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-    wx.showModal({
-      content: "生命周期函数--监听页面隐藏",
-      confirmText: "确定",
-      cancelText: "取消"
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-    wx.showModal({
-      content: "生命周期函数--监听页面卸载",
-      confirmText: "确定",
-      cancelText: "取消"
-    })
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    wx.showModal({
-      content: "页面相关事件处理函数--监听用户下拉动作",
-      confirmText: "确定",
-      cancelText: "取消"
-    })
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    wx.showModal({
-      content: "页面上拉触底事件的处理函数",
-      confirmText: "确定",
-      cancelText: "取消"
-    })
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  navigateToAboutus: function () {
+    wx.navigateTo({
+      url: '/pages/member/aboutus/aboutus'
+    });
   }
 })

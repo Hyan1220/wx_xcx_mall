@@ -1,10 +1,75 @@
-/** wxss **/
-/** 修改button默认的点击态样式类**/
-.button-hover {
-  background-color: red;
+page {
+	background: #eee;
 }
-/** 添加自定义button点击态样式类**/
-.other-button-hover {
-  background-color: blue;
+/* .container{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+} */
+.userinfo {
+	display: flex;
+	flex-direction: column;
+	padding: 50rpx 0;
+	align-items: center;
+	background: #FFF;
+  width: 750rpx;
 }
-button {margin: 10px;}
+
+.userinfo-avatar {
+	width: 160rpx;
+	height: 160rpx;
+	margin: 20rpx;
+	border-radius: 50%;
+}
+
+.userinfo-nickname {
+  margin-top: 20rpx;
+  color: #FFF;
+}
+
+/*button*/
+.logout {
+	margin: 30rpx;
+}
+
+/*order*/
+.order-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  margin: 20rpx 0;
+  padding: 20rpx 0;
+}
+
+.order {
+	width: 33.3%;
+	text-align: center;
+}
+
+.order image {
+	width: 90rpx;
+	height: 90rpx;
+}
+
+.order text{
+	display: block;
+	font-size: 30rpx;
+	color: #333;
+}
+
+/*menu list*/
+.tableviewcell {
+	padding: 20rpx 40rpx;
+	border-bottom: 1rpx solid #ddd;
+	color: #666;
+	background: white;
+	display: flex;
+	align-items: center;
+}
+/*icon*/
+.tableviewcell image {
+	width: 60rpx;
+	height: 60rpx;
+}
