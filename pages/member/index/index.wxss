@@ -24,7 +24,7 @@ page {
 
 .userinfo-nickname {
   margin-top: 20rpx;
-  color: #FFF;
+  color: #000;
 }
 
 /*button*/

@@ -25,12 +25,19 @@ Page({
       url: '../../order/list/list?status=' + status
     });
   },
+  /**收货地址 */
   navigateToAddress: function () {
     wx.navigateTo({
       url: '../../address/list/list'
     });
   },
-
+  /**充值 */
+  navigateToRecharge: function () {
+    wx.navigateTo({
+      url: '../../address/list/list'
+    });
+  },
+  /**关于我们 */
   navigateToAboutus: function () {
     wx.navigateTo({
       url: '/pages/member/aboutus/aboutus'
